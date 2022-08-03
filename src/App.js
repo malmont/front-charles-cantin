@@ -6,6 +6,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Tarifs from "./components/Tarifs/Tarifs";
 import Contact from "./components/contact/contact"
 import NavBar from './components/NavBar/NavBar';
+import Footer from "./components/Footer/Footer"
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
       <Route path='/Tarifs' element={<Tarifs/>} />
       <Route path='/Contact' element={<Contact/>} />
       </Routes>
+      <Footer/>
    
     </>
   );
