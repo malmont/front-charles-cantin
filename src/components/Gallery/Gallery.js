@@ -1,29 +1,54 @@
 import styled from "styled-components";
-import React from 'react';
+import React, {useState} from 'react';
 import {useTrail,animated} from 'react-spring';
 import {v4 as uuidv4} from 'uuid';
 import DataGallery from './DataGallery';
 
 
 export default function Gallery() {
-
+  const [filterGallery,setFilterGallery] = useState(DataGallery);
   
-  const trail = useTrail(DataGallery.length,{
+  const trail = useTrail(filterGallery.length,{
+
     from:{
-     opacity:0,
-     x:20
+      opacity:0,
+      x:20
     },
     to:{
      opacity:1,
      x:0
     }
- })
+ });
+
+
+
+ const selectGallery= e=>{
+  e.preventDefault();
+  console.log(e.target.value)
+  const newArr = [...DataGallery];
+  const newGallery = newArr.filter(item =>{
+    if(e.target.value === "All"){return DataGallery;}
+    return item.categorie === e.target.value;
+})
+console.log(e.target.value)
+setFilterGallery(newGallery);
+
+ }
 
   return (
     <Wrapper>
    <h1>Gallerie</h1>
       <WrapperList>
-
+<div className="container ">
+  <select onChange={selectGallery} class="selectpicker mx-5 mb-5" data-width="100px" aria-label="Default select example">
+  <option selected>All</option>
+  <option value="Famille">Famille</option>
+  <option value="Grossesse">Grossesse</option>
+  <option value="Couple">Couple</option>
+  <option value="Bébé">Bébé</option>
+  <option value="Mariage">Mariage</option>
+  </select>
+  </div>
       {trail.map((cardStyle,index)=>{
               return <animated.div
               key={uuidv4()}
@@ -33,7 +58,7 @@ export default function Gallery() {
 
                 <animated.div >  
                 <WrapDIvPhoto >
-                  <img  className="img-fluid" src={DataGallery[index].lien} alt="" />      
+                  <img  className="img-fluid" src={process.env.PUBLIC_URL + filterGallery[index].lien} alt="" />      
                   </WrapDIvPhoto>
                 </animated.div>
 

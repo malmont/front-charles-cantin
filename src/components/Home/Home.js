@@ -6,7 +6,7 @@ import Photo from "./photo.png"
 export default function Home() {
   return (
     <Wrapper>
-     <h1>Accueil</h1>
+     <h1 className="text-center">Accueil</h1>
      <div className="container">
       <div className="row">
         <WrapDIvPhoto >
