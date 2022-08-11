@@ -68,11 +68,11 @@ export default function Contact() {
 
   return (
     <Wrapper>
-  
+      <h1>ENVOYER VOTRE MESSAGE</h1>
       <hr />
       <form onSubmit={handleOnSubmit}>
         <label htmlFor="name">Name</label>
-        <input
+        <input class="form-control "
           id="name"
           type="text"
           name="_name"
@@ -81,7 +81,7 @@ export default function Contact() {
           value={inputs.name}
         />
         <label htmlFor="email">Email</label>
-        <input
+        <input class="form-control"
           id="email"
           type="email"
           name="_replyto"
@@ -90,7 +90,7 @@ export default function Contact() {
           value={inputs.email}
         />
         <label htmlFor="message">Message</label>
-        <textarea
+        <textarea class="form-control"
           id="message"
           name="message"
           onChange={handleOnChange}
@@ -114,10 +114,10 @@ export default function Contact() {
   )
 }
 const Wrapper=styled.div`
- margin: 7rem auto;
-max-width: 600px;
+    margin: 7rem ;
+    max-width: 500px;
 & h1{
-  color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 2rem;
     font-weight: normal;
@@ -127,32 +127,22 @@ max-width: 600px;
     text-align: center;
 }
 & hr{
-  margin: 1rem auto;
-    width: 500px;
+    margin: 1rem auto;
+    width: 20rem;
 
 }
 & label{
-  display: flex;
+    display: flex;
     flex-direction: column;
     font-size: 1.5rem;
     margin: 3rem auto 1rem auto;
     text-align: start;
     text-transform: uppercase;
 }
-& textarea,input{
-  background-color: #D9D9D9;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    text-align: start;
-    height:40px;
-    width:640px;
-}
-& textarea{
-  height:200px;
-}
+
 
 & button {
+  margin-top:30px;
     background: black;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     border-radius: 5px;
@@ -166,5 +156,6 @@ max-width: 600px;
     outline: none;
     text-decoration: none;
 }
+
 
 `;
