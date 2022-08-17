@@ -1,12 +1,145 @@
 import styled from "styled-components";
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {useTrail,animated} from 'react-spring';
 import {v4 as uuidv4} from 'uuid';
-import DataGallery from './DataGallery';
-
+// import DataGallery from './DataGallery';
+import HomeAPI from "../../services/HomeAPI"
 
 export default function Gallery() {
-  const [filterGallery,setFilterGallery] = useState(DataGallery);
+  const [Gallery,setGallery] = useState([]);
+  const dataGallery=[];
+  const [isLoading,setIsLoading] = useState(true);
+  const [posts,setPosts] = useState(null);
+
+  const URLImage="https://backend-charles-cantin.herokuapp.com";
+
+  useEffect(()=>{
+    fetchGalleryBaby();
+    fetchGalleryFamily();
+    fetchGalleryGrossesse();
+    fetchGalleryMariage();
+    fetchGalleryCouple();
+    setGallery(dataGallery);
+    setIsLoading(false);
+  },[]);
+
+  const fetchGalleryBaby = async () =>{
+    const data = await  HomeAPI.GalleryAPI();
+    const arrayLoading = data.data[0].attributes.Baby.data;
+    // console.log(arrayLoading.map((item)=>{
+    //   return item.attributes.url;
+    // }))
+    
+    const arrayUrl = arrayLoading.map((item)=>{
+       dataGallery.push({
+        id: uuidv4(),
+        lien: URLImage+ item.attributes.url,
+        categorie: "Bébé"
+      })
+     
+    })
+
+  const newArr = [...Gallery,...dataGallery];
+  // console.log(newArr)
+  setGallery(newArr);
+    setIsLoading(false);
+    
+    
+  }
+
+  const fetchGalleryFamily = async () =>{
+    const data = await  HomeAPI.GalleryAPI();
+    const arrayLoading = data.data[0].attributes.Famille.data;
+    // console.log(arrayLoading.map((item)=>{
+    //   return item.attributes.url;
+    // }))
+    
+    const arrayUrl = arrayLoading.map((item)=>{
+       dataGallery.push({
+        id: uuidv4(),
+        lien: URLImage+ item.attributes.url,
+        categorie: "Famille"
+      })
+     
+    })
+
+  const newArr = [...Gallery,...dataGallery];
+  
+  setGallery(newArr);
+    setIsLoading(false);
+    
+    
+  }
+
+  const fetchGalleryGrossesse = async () =>{
+    const data = await  HomeAPI.GalleryAPI();
+    const arrayLoading = data.data[0].attributes.Grossesse.data;
+    // console.log(arrayLoading.map((item)=>{
+    //   return item.attributes.url;
+    // }))
+    
+    const arrayUrl = arrayLoading.map((item)=>{
+       dataGallery.push({
+        id: uuidv4(),
+        lien: URLImage+ item.attributes.url,
+        categorie: "Grossesse"
+      })
+     
+    })
+
+  const newArr = [...Gallery,...dataGallery];
+
+  setGallery(newArr);
+    setIsLoading(false);
+    
+  }
+  const fetchGalleryMariage = async () =>{
+    const data = await  HomeAPI.GalleryAPI();
+    const arrayLoading = data.data[0].attributes.Mariage.data;
+    // console.log(arrayLoading.map((item)=>{
+    //   return item.attributes.url;
+    // }))
+    
+    const arrayUrl = arrayLoading.map((item)=>{
+       dataGallery.push({
+        id: uuidv4(),
+        lien: URLImage+ item.attributes.url,
+        categorie: "Mariage"
+      })
+     
+    })
+
+  const newArr = [...Gallery,...dataGallery];
+
+
+   
+    
+  }
+  const fetchGalleryCouple= async () =>{
+    const data = await  HomeAPI.GalleryAPI();
+    const arrayLoading = data.data[0].attributes.Couple.data;
+    // console.log(arrayLoading.map((item)=>{
+    //   return item.attributes.url;
+    // }))
+    
+    const arrayUrl = arrayLoading.map((item)=>{
+       dataGallery.push({
+        id: uuidv4(),
+        lien: URLImage+ item.attributes.url,
+        categorie: "Couple"
+      })
+     
+    })
+
+  const newArr = [...Gallery,...dataGallery];
+ 
+  setGallery(newArr);
+    setIsLoading(false);
+ 
+    
+  }
+
+  const [filterGallery,setFilterGallery] = useState(dataGallery);
   
   const trail = useTrail(filterGallery.length,{
 
@@ -25,9 +158,10 @@ export default function Gallery() {
  const selectGallery= e=>{
   e.preventDefault();
   console.log(e.target.value)
-  const newArr = [...DataGallery];
+  const newArr = [...Gallery];
+  console.log(Gallery)
   const newGallery = newArr.filter(item =>{
-    if(e.target.value === "All"){return DataGallery;}
+    if(e.target.value === "All"){return Gallery;}
     return item.categorie === e.target.value;
 })
 console.log(e.target.value)

@@ -16,11 +16,10 @@ export default function Home() {
   },[]);
 
   const fetchAllData = async () =>{
-    const data = await  HomeAPI();
-    console.log(data)
+    const data = await  HomeAPI.HomeAPI();
     setPosts(data);
     setIsLoading(false);
-
+    console.log(posts)
   }
 
   return (
@@ -29,7 +28,7 @@ export default function Home() {
      <div className="container">
       <div className="row">
         <WrapDIvPhoto >
-          <img className="img-fluid" src={isLoading? 'Loading...':URLImage+posts.data[0]["attributes"].photo_accueil.data.attributes.url} alt="" />
+          <img className="img-fluid" src={isLoading? 'Loading...':URLImage+posts.data[0]["attributes"].photo_accueil.data[0].attributes.url} alt="" />
           </WrapDIvPhoto>
       </div>
 
