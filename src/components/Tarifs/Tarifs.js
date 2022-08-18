@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React,{useState,useEffect} from 'react';
 import styled from "styled-components";
 import studio from "./studio.jpeg";
 import couple from "./couple.jpeg";
@@ -8,7 +8,7 @@ import children from "./children.jpeg";
 import mariage from "./mariage.jpeg";
 import {Waypoint} from 'react-waypoint';
 import {useSpring, animated} from "react-spring";
-
+import HomeAPI from "../../services/HomeAPI"
 
 export default function Tarifs() {
 
@@ -20,6 +20,24 @@ export default function Tarifs() {
   const [toogleTxt5,setToggleTxt5] = useState(false);
 
 
+  const [isLoading,setIsLoading] = useState(true);
+  const [posts,setPosts] = useState(null);
+
+ const URLImage="https://backend-charles-cantin.herokuapp.com";
+
+  useEffect(()=>{
+    fetchAllData();
+  },[]);
+
+  const fetchAllData = async () =>{
+    const data = await  HomeAPI.TarifAPI();
+    setPosts(data);
+    console.log(data)
+    setIsLoading(false);
+    
+  }
+
+  
   const animationleftToRight = useSpring({
     config: {
       mass: 5,
@@ -100,19 +118,36 @@ export default function Tarifs() {
        
       }}
       />
+      {/* {posts.data.map((item)=>{
+  return <div className="row mt-5">
+
+  <div className="col mt-5  text-center ">
+      <h3>
+      {isLoading? 'Loading...':item.attributes.Intitule}
+      </h3>
+      <button type="button" class="btn  my-4">   {isLoading? 'Loading...':item.attributes.name_button}</button>
+  </div>
+
+  <div className="col mx-auto">
+      <img  src={isLoading? 'Loading...':URLImage+item["attributes"].photo_offre.data[0].attributes.url}  alt=''/>
+  </div>
+
+</div>
+
+      })} */}
 
         <animated.div style={animationleftToRight} className="cta-section">
         <div className="row mt-5">
 
           <div className="col mt-5  text-center ">
               <h3>
-              Séance pour une personne en extérieur ou en studio
+              {isLoading? 'Loading...':posts.data[0].attributes.Intitule}
               </h3>
-              <button type="button" class="btn  my-4">130 Euros</button>
+              <button type="button" class="btn  my-4">   {isLoading? 'Loading...':posts.data[0].attributes.name_button}</button>
           </div>
 
           <div className="col mx-auto">
-              <img  src={studio} alt=''/>
+              <img  src={isLoading? 'Loading...':URLImage+posts.data[0]["attributes"].photo_offre.data[0].attributes.url}  alt=''/>
           </div>
 
         </div>

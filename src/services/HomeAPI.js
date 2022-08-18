@@ -1,5 +1,7 @@
 
 
+
+
  function HomeAPI() {
  const URL = 'https://backend-charles-cantin.herokuapp.com/api/accueils?populate=*';
   return  fetch(
@@ -24,7 +26,25 @@ function GalleryAPI(){
        }).then((res)=> res.json());
 }
 
+
+function TarifAPI(){
+  const URL = 'https://backend-charles-cantin.herokuapp.com/api/offres?populate=*';
+   return  fetch(
+     URL,
+     {
+       method:"GET",
+       headers : {
+         Accept:'Application/json',
+       },
+     }).then((res)=> res.json());
+}
+
+
+
+
+
 export default {
   HomeAPI,
-  GalleryAPI
+  GalleryAPI,
+  TarifAPI,
 };
