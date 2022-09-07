@@ -3,7 +3,7 @@
 
 
  function HomeAPI() {
- const URL = 'https://backend-charles-cantin.herokuapp.com/api/accueils?populate=*';
+ const URL = 'https://31.220.53.103/api/accueils?populate=*';
   return  fetch(
     URL,
     {
@@ -15,7 +15,7 @@
 }
 
 function GalleryAPI(){
-    const URL = 'https://backend-charles-cantin.herokuapp.com/api/galleries?populate=*';
+    const URL = 'https://31.220.53.103/api/galleries?populate=*';
      return  fetch(
        URL,
        {
@@ -28,7 +28,7 @@ function GalleryAPI(){
 
 
 function TarifAPI(){
-  const URL = 'https://backend-charles-cantin.herokuapp.com/api/offres?populate=*';
+  const URL = 'https://31.220.53.103/api/offres?populate=*';
    return  fetch(
      URL,
      {
