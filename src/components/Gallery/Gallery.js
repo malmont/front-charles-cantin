@@ -15,13 +15,51 @@ export default function Gallery() {
   const URLImage="https://31.220.53.103";
 
   useEffect(()=>{
-   
-    fetchGalleryBaby();
-    fetchGalleryFamily();
-    fetchGalleryGrossesse();
-    fetchGalleryMariage();
-    fetchGalleryCouple();
+    fetchGallery("Bébé");
+    fetchGallery("Famille");
+    fetchGallery("Grossesse");
+    fetchGallery("Mariage");
+    fetchGallery("Couple");
+    // fetchGalleryBaby();
+    // fetchGalleryFamily();
+    // fetchGalleryGrossesse();
+    // fetchGalleryMariage();
+    // fetchGalleryCouple();
   },[]);
+
+
+  async function arrayLoadingFunction(paramGallery) {
+  const data = await HomeAPI.GalleryAPI();
+  if (paramGallery==="Bébé"){
+    return data.data[0].attributes.Baby.data;
+  }
+  if (paramGallery==="Famille"){
+    return data.data[0].attributes.Famille.data;
+  }
+  if (paramGallery==="Grossesse"){
+    return data.data[0].attributes.Baby.data;
+  }
+  if (paramGallery==="Mariage"){
+    return data.data[0].attributes.Mariage.data;
+  }
+  if (paramGallery==="Couple"){
+    return data.data[0].attributes.Couple.data;
+  }
+ 
+}
+
+  async function fetchGallery(categorie) {
+    
+   const arrayLoading = arrayLoadingFunction(categorie);
+    arrayLoading.map((item) => {
+      dataGallery.push({
+        id: uuidv4(),
+        lien: URLImage + item.attributes.url,
+        categorie: categorie
+      });
+
+    });
+  }
 
   const fetchGalleryBaby = async () =>{
     const data = await  HomeAPI.GalleryAPI();
@@ -199,4 +237,4 @@ border-radius:15px;
 & img{
   border-radius:15px;
 }
-`;
+`
