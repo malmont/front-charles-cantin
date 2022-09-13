@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/front-charles-cantin/static/css/main.61c1a49d.css",
-    "main.js": "/front-charles-cantin/static/js/main.7b768404.js",
+    "main.js": "/front-charles-cantin/static/js/main.be5726de.js",
     "static/js/787.e7981b52.chunk.js": "/front-charles-cantin/static/js/787.e7981b52.chunk.js",
     "static/media/couple.jpeg": "/front-charles-cantin/static/media/couple.1da4c3ea7a673a17f318.jpeg",
     "static/media/mariage.jpeg": "/front-charles-cantin/static/media/mariage.3c40b70c2fa29bb0cf52.jpeg",
@@ -12,11 +12,11 @@
     "static/media/children.jpeg": "/front-charles-cantin/static/media/children.46b0ada30fe16c651c38.jpeg",
     "index.html": "/front-charles-cantin/index.html",
     "main.61c1a49d.css.map": "/front-charles-cantin/static/css/main.61c1a49d.css.map",
-    "main.7b768404.js.map": "/front-charles-cantin/static/js/main.7b768404.js.map",
+    "main.be5726de.js.map": "/front-charles-cantin/static/js/main.be5726de.js.map",
     "787.e7981b52.chunk.js.map": "/front-charles-cantin/static/js/787.e7981b52.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61c1a49d.css",
-    "static/js/main.7b768404.js"
+    "static/js/main.be5726de.js"
   ]
 }
