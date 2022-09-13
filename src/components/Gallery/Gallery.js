@@ -83,7 +83,7 @@ setFilterGallery(newGallery);
 
                 <animated.div >  
                 <WrapDIvPhoto >
-                <img  className="img-fluid" src={process.env.PUBLIC_URL + filterGallery[index].lien} alt="" />  
+                <img  className="img-fluid" src={filterGallery[index].lien} alt="" />  
                   
                   </WrapDIvPhoto>
                 </animated.div>
