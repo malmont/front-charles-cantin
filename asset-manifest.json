@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/frontend-charles-cantin/static/css/main.61c1a49d.css",
-    "main.js": "/frontend-charles-cantin/static/js/main.0c540fae.js",
-    "static/js/787.e7981b52.chunk.js": "/frontend-charles-cantin/static/js/787.e7981b52.chunk.js",
-    "static/media/couple.jpeg": "/frontend-charles-cantin/static/media/couple.1da4c3ea7a673a17f318.jpeg",
-    "static/media/mariage.jpeg": "/frontend-charles-cantin/static/media/mariage.3c40b70c2fa29bb0cf52.jpeg",
-    "static/media/logo.png": "/frontend-charles-cantin/static/media/logo.852ff4531cae42744f1e.png",
-    "static/media/family.jpeg": "/frontend-charles-cantin/static/media/family.f963c09092af2620ecf3.jpeg",
-    "static/media/birch.jpeg": "/frontend-charles-cantin/static/media/birch.c1cf50f67bb3e67dec19.jpeg",
-    "static/media/studio.jpeg": "/frontend-charles-cantin/static/media/studio.5f773050e1302231be8d.jpeg",
-    "static/media/children.jpeg": "/frontend-charles-cantin/static/media/children.46b0ada30fe16c651c38.jpeg",
-    "index.html": "/frontend-charles-cantin/index.html",
-    "main.61c1a49d.css.map": "/frontend-charles-cantin/static/css/main.61c1a49d.css.map",
-    "main.0c540fae.js.map": "/frontend-charles-cantin/static/js/main.0c540fae.js.map",
-    "787.e7981b52.chunk.js.map": "/frontend-charles-cantin/static/js/787.e7981b52.chunk.js.map"
+    "main.css": "/front-charles-cantin/static/css/main.61c1a49d.css",
+    "main.js": "/front-charles-cantin/static/js/main.7b768404.js",
+    "static/js/787.e7981b52.chunk.js": "/front-charles-cantin/static/js/787.e7981b52.chunk.js",
+    "static/media/couple.jpeg": "/front-charles-cantin/static/media/couple.1da4c3ea7a673a17f318.jpeg",
+    "static/media/mariage.jpeg": "/front-charles-cantin/static/media/mariage.3c40b70c2fa29bb0cf52.jpeg",
+    "static/media/logo.png": "/front-charles-cantin/static/media/logo.852ff4531cae42744f1e.png",
+    "static/media/family.jpeg": "/front-charles-cantin/static/media/family.f963c09092af2620ecf3.jpeg",
+    "static/media/birch.jpeg": "/front-charles-cantin/static/media/birch.c1cf50f67bb3e67dec19.jpeg",
+    "static/media/studio.jpeg": "/front-charles-cantin/static/media/studio.5f773050e1302231be8d.jpeg",
+    "static/media/children.jpeg": "/front-charles-cantin/static/media/children.46b0ada30fe16c651c38.jpeg",
+    "index.html": "/front-charles-cantin/index.html",
+    "main.61c1a49d.css.map": "/front-charles-cantin/static/css/main.61c1a49d.css.map",
+    "main.7b768404.js.map": "/front-charles-cantin/static/js/main.7b768404.js.map",
+    "787.e7981b52.chunk.js.map": "/front-charles-cantin/static/js/787.e7981b52.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.61c1a49d.css",
-    "static/js/main.0c540fae.js"
+    "static/js/main.7b768404.js"
   ]
 }
