@@ -1,12 +1,16 @@
 # PROJET Charles Cantin
 Site vitrine Charles Cantin
+<br/>
 Ce document est un guide de déploiement et un manuel d'utilisation 
 pour l'application TRT-CONSEIL dévéloppé dans le cadre de l'ECF d'entrainement ayant pour titre:
+<br/>
 **Développer la partie front-end d’une application web**
-de l'école STUDI.
-Selon le cahier des charges l'application demandé devra être un site
- vitrine pour un photographe qui veut dévelloper son activité.
 
+de l'école STUDI.
+<br/>
+Selon le cahier des charges l'application demandé devra être un site
+vitrine pour un photographe qui veut dévelloper son activité.
+Ce site est la partie front-end du projet
 ------
 
 # Fonctionnalités de l'application
