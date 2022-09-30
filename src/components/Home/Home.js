@@ -9,7 +9,7 @@ export default function Home() {
   const [isLoading,setIsLoading] = useState(true);
   const [posts,setPosts] = useState(null);
 
- const URLImage="https://31.220.53.103";
+ const URLImage="http://31.220.53.103:1337";
 
   useEffect(()=>{
     fetchAllData();
@@ -19,7 +19,7 @@ export default function Home() {
     const data = await  HomeAPI.HomeAPI();
     setPosts(data);
     setIsLoading(false);
-    console.log(posts)
+    
   }
 
   return (
@@ -56,16 +56,26 @@ const WrapDIvPhoto = styled.div`
 padding:20px;
 width:650px;
 margin : 0 auto;
+@media (max-width : 640px){
+ 
+    width:350px;
+}
 `;
 
 const WrapDivName = styled.div `
 height:250px;
 
 & h1{
-  font-size:100px;
+  font-size:80px;
 }
 & div{
   border-bottom:solid 20px #70ACAC;
+}
+
+@media (max-width : 640px){
+  & h1{
+  font-size:40px;
+}
 }
 
 `;

@@ -2,8 +2,8 @@ import HomeAPI from "../../services/HomeAPI";
 import {v4 as uuidv4} from 'uuid';
 
    
-    const dataGallery=[];
-    const URLImage="https://31.220.53.103";
+    var dataGallery=[];
+    const URLImage="http://31.220.53.103:1337";
   async function arrayLoadingFunction(paramGallery) {
 
     if (paramGallery==="Bébé"){
@@ -32,10 +32,11 @@ import {v4 as uuidv4} from 'uuid';
   }
   
     async function fetchGallery(categorie) {
-      
+      dataGallery=[];
      const arrayLoading = await arrayLoadingFunction(categorie);
       arrayLoading.map((item) => {
-  
+        
+      
          dataGallery.push({
           id: uuidv4(),
           lien: URLImage + item.attributes.url,
@@ -44,6 +45,7 @@ import {v4 as uuidv4} from 'uuid';
   
       });
       return dataGallery;
+      
     }
 
   

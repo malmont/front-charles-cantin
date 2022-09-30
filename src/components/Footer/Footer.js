@@ -1,5 +1,6 @@
 import { BsWhatsapp,BsFacebook,BsInstagram,BsTwitter } from "react-icons/bs";
 import styled from "styled-components";
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -16,13 +17,13 @@ export default function Footer() {
                 </div>
                 <div className="col my-5">
                     <h2 >Contactez nous</h2>
-                    <a href="#">Contact</a>
+                   <Link to ="/Contact">Contact</Link>
                 </div>
                 <div className="col pt-5 my-5">
-                    <div className="col mx-3  d-inline"><BsWhatsapp size={30} color='#E4ECEC'/></div>
-                    <div className="col mx-3 d-inline"><BsFacebook size={30} color='#E4ECEC'/></div>
-                    <div className="col mx-3 d-inline"><BsInstagram size={30} color='#E4ECEC'/></div>
-                    <div className="col mx-3 d-inline"><BsTwitter size={30} color='#E4ECEC'/></div>
+                    <div className="col mx-3 mb-3 d-inline-block"><BsWhatsapp size={30} color='#E4ECEC'/></div>
+                    <div className="col mx-3 mb-3 d-inline-block"><BsFacebook size={30} color='#E4ECEC'/></div>
+                    <div className="col mx-3 mb-3 d-inline-block"><BsInstagram size={30} color='#E4ECEC'/></div>
+                    <div className="col mx-3 mb-3 d-inline-block"><BsTwitter size={30} color='#E4ECEC'/></div>
                 
                 </div>
             </div>

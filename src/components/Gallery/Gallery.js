@@ -8,24 +8,26 @@ import fetchGalleryFunction from "../Gallery/FetchGalleryFunction"
 
 export default function Gallery() {
   const [Gallery,setGallery] = useState([]);
-  let dataGallery=[];
+  var dataGallery=[];
   const [filterGallery,setFilterGallery] = useState(dataGallery);
 
   useEffect(()=>{
-   
+ 
     fetchGallery("Bébé");
     fetchGallery("Famille");
     fetchGallery("Grossesse");
     fetchGallery("Mariage");
     fetchGallery("Couple");
-
+   
 
   },[]);
 
 
   async function fetchGallery(categorie) {
+
+  
     dataGallery = await fetchGalleryFunction.fetchGallery(categorie);
-    console.log(dataGallery);
+    console.log(dataGallery)
     const newArr = [...Gallery,...dataGallery];
     setGallery(newArr);
     setFilterGallery(dataGallery);

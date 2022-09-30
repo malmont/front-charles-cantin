@@ -32,7 +32,7 @@ export default function NavBar() {
    {(toggleMenu || largeur > 500) &&(
    
       <ul className="liste">
-        <li><NavLink to ="/" className={({isActive})=>{return isActive?"activeLink" :""}}>   <BsHouse size={30} color='#E4ECEC'/></NavLink></li> 
+        <li>< NavLink to ="/" className={({isActive})=>{return isActive?"activeLink" :""}}>   <BsHouse size={30} color='#E4ECEC'/></NavLink></li> 
         <li><NavLink to ="/Gallery"className={({isActive})=>{return isActive?"activeLink" :""}}>  <BsFillCameraFill size={30} color='#E4ECEC'/></NavLink></li>
         <li><NavLink to ="/Tarifs"className={({isActive})=>{return isActive?"activeLink" :""}}> <BsFillCartFill size={30} color='#E4ECEC'/></NavLink></li>
         <li><NavLink to ="/Contact"className={({isActive})=>{return isActive?"activeLink" :""}}> <BsTelephoneFill size={30} color='#E4ECEC'/></NavLink></li>

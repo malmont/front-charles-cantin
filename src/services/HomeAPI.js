@@ -2,8 +2,9 @@
 
 
 
+
  function HomeAPI() {
- const URL = 'https://31.220.53.103/api/accueils?populate=*';
+ const URL = 'http://31.220.53.103:1337/api/accueils?populate=*';
   return  fetch(
     URL,
     {
@@ -15,7 +16,7 @@
 }
 
 function GalleryAPI(){
-    const URL = 'https://31.220.53.103/api/galleries?populate=*';
+    const URL = 'http://31.220.53.103:1337/api/galleries?populate=*';
      return  fetch(
        URL,
        {
@@ -28,7 +29,7 @@ function GalleryAPI(){
 
 
 function TarifAPI(){
-  const URL = 'https://31.220.53.103/api/offres?populate=*';
+  const URL = 'http://31.220.53.103:1337/api/offres?populate=*';
    return  fetch(
      URL,
      {

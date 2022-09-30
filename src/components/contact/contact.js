@@ -119,7 +119,7 @@ const Wrapper=styled.div`
 & h1{
     color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 40px;
     font-weight: normal;
     line-height: 4rem;
     margin: 0 auto;
@@ -128,13 +128,13 @@ const Wrapper=styled.div`
 }
 & hr{
     margin: 1rem auto;
-    width: 20rem;
+    width: 10rem;
 
 }
 & label{
     display: flex;
     flex-direction: column;
-    font-size: 1.5rem;
+    font-size:25px;
     margin: 3rem auto 1rem auto;
     text-align: start;
     text-transform: uppercase;
@@ -150,12 +150,24 @@ const Wrapper=styled.div`
     color: white;
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+    font-size: 40px;
     font-weight: normal;
     height: 3.8rem;
     outline: none;
     text-decoration: none;
 }
+@media (max-width : 640px){
+  & h1{
+  font-size:20px;
+}
+& label{
+  font-size:20px;
 
+}
+& button {
+  font-size:20px;
+
+}
+}
 
 `;
