@@ -4,7 +4,7 @@
 
 
  function HomeAPI() {
- const URL = 'http://31.220.53.103:1337/api/accueils?populate=*';
+ const URL = 'https://backend-strapi.online/api/accueils?populate=*';
   return  fetch(
     URL,
     {
@@ -16,7 +16,7 @@
 }
 
 function GalleryAPI(){
-    const URL = 'http://31.220.53.103:1337/api/galleries?populate=*';
+    const URL = 'https://backend-strapi.online/api/galleries?populate=*';
      return  fetch(
        URL,
        {
@@ -29,7 +29,7 @@ function GalleryAPI(){
 
 
 function TarifAPI(){
-  const URL = 'http://31.220.53.103:1337/api/offres?populate=*';
+  const URL = 'https://backend-strapi.online/api/offres?populate=*';
    return  fetch(
      URL,
      {

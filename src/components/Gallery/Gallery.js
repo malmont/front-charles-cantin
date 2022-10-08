@@ -63,7 +63,7 @@ setFilterGallery(newGallery);
 
   return (
     <Wrapper>
-   <h1>Gallerie</h1>
+   <h1>Galerie</h1>
       <WrapperList>
         
 <div className="container ">
