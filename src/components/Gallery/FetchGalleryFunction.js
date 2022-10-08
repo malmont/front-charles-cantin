@@ -3,7 +3,7 @@ import {v4 as uuidv4} from 'uuid';
 
    
     var dataGallery=[];
-    const URLImage="https://backend-strapi.online";
+    const URLImage="https://31.220.53.103";
   async function arrayLoadingFunction(paramGallery) {
 
     if (paramGallery==="Bébé"){

@@ -9,7 +9,7 @@ export default function Home() {
   const [isLoading,setIsLoading] = useState(true);
   const [posts,setPosts] = useState(null);
 
- const URLImage="https://backend-strapi.online";
+ const URLImage="https://31.220.53.103";
 
   useEffect(()=>{
     fetchAllData();
