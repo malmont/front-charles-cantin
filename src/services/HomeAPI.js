@@ -4,7 +4,7 @@
 
 
  function HomeAPI() {
- const URL = 'https://31.220.53.103/api/accueils?populate=*';
+ const URL = 'https://backend-strapi.online/api/accueils?populate=*';
   return  fetch(
     URL,
     {
@@ -44,7 +44,6 @@ function TarifAPI(){
 
 
 
-// eslint-disable-next-line import/no-anonymous-default-export
 export default {
   HomeAPI,
   GalleryAPI,
