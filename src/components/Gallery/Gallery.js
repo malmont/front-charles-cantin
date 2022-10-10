@@ -63,10 +63,11 @@ setFilterGallery(newGallery);
 
   return (
     <Wrapper>
-   <h1>Galerie</h1>
-      <WrapperList>
-        
-<div className="container ">
+      <div>
+      <h1>Galerie</h1> 
+      </div>
+  
+   <div className="container ">
   <select onChange={selectGallery} class="selectpicker mx-5 mb-5" data-width="100px" aria-label="Default select example">
   <option selected>All</option>
   <option value="Famille">Famille</option>
@@ -76,6 +77,9 @@ setFilterGallery(newGallery);
   <option value="Mariage">Mariage</option>
   </select>
   </div>
+      <WrapperList>
+        
+
   
       {trail.map((cardStyle,index)=>{
      

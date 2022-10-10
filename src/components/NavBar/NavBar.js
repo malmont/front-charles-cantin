@@ -26,7 +26,7 @@ export default function NavBar() {
   return (
     <Wrapper>
        <WrapSpan>
-        <img className="img-fluid" src={Logo} alt="" />
+        <img  src={Logo} alt="" />
        </WrapSpan>
    <nav>
    {(toggleMenu || largeur > 500) &&(
@@ -51,7 +51,7 @@ const Wrapper=styled.header `
 
   
     width: 100%;
-    height: 120px;
+    height: 140px;
     background: #44545C;
     & ul{
     list-style-type: none;
@@ -66,13 +66,14 @@ const Wrapper=styled.header `
     margin-right: 20px ;
     margin-left:20px;
   
-    margin-bottom:20px;
+    margin-bottom:10px;
     color: #E4ECEC;
     cursor: pointer;
     &:hover{
   
   }
     }
+    
   
     }
 

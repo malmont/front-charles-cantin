@@ -2,13 +2,13 @@
 Site vitrine Charles Cantin
 <br/>
 Ce document est un guide de déploiement et un manuel d'utilisation 
-pour l'application TRT-CONSEIL dévéloppé dans le cadre de l'ECF d'entrainement ayant pour titre:
+pour l'application TRT-CONSEIL dévéloppée dans le cadre de l'ECF d'entrainement ayant pour titre:
 <br/>
 **Développer la partie front-end d’une application web**
 
 de l'école STUDI.
 <br/>
-Selon le cahier des charges l'application demandé devra être un site
+Selon le cahier des charges l'application demandée devra être un site
 vitrine pour un photographe qui veut dévelloper son activité.
 Ce site est la partie front-end du projet
 ------
@@ -95,7 +95,7 @@ Dans le répertoire du projet, vous pouvez exécuter :
 
 ### `npm start`
 
-Exécute l'application en mode développement.\
+Exécutez l'application en mode développement.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 La page se rechargera lorsque vous apporterez des modifications.\
@@ -124,7 +124,7 @@ Si vous n'êtes pas satisfait de l'outil de construction et des choix de configu
 
 Au lieu de cela, il copiera tous les fichiers de configuration et les dépendances transitives (webpack, Babel, ESLint, etc.) directement dans votre projet afin que vous ayez un contrôle total sur eux. Toutes les commandes sauf `eject` fonctionneront toujours, mais elles pointeront vers les scripts copiés afin que vous puissiez les modifier. À ce stade, vous êtes seul.
 
-Vous n'avez jamais besoin d'utiliser `eject`. L'ensemble de fonctionnalités organisé convient aux déploiements de petite et moyenne taille, et vous ne devriez pas vous sentir obligé d'utiliser cette fonctionnalité. Cependant, nous comprenons que cet outil ne serait pas utile si vous ne pouviez pas le personnaliser lorsque vous êtes prêt.
+Vous n'avez jamais besoin d'utiliser `eject`. L'ensemble de fonctionnalités organisé convient aux déploiements de petites et moyennes tailles, et vous ne devriez pas vous sentir obligé d'utiliser cette fonctionnalité. Cependant, nous comprenons que cet outil ne serait pas utile si vous ne pouviez pas le personnaliser lorsque vous êtes prêt.
 
 ## Apprendre encore plus
 
@@ -193,7 +193,7 @@ $ npm install --save gh-pages
 }
 ```
 
-votre fichier package.json devra ressemblé à ceci:
+votre fichier package.json devra ressembler à ceci:
 ```package.json
 {
   "name": "charles-cantin",
