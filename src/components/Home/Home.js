@@ -3,6 +3,7 @@ import styled from "styled-components";
 import React, {useState,useEffect} from 'react';
 // import Photo from "./photo.png"
 import HomeAPI from "../../services/HomeAPI"
+import { Typewriter } from 'react-simple-typewriter';
 
 export default function Home() {
 
@@ -24,7 +25,23 @@ export default function Home() {
 
   return (
     <Wrapper>
-     <h1 className="text-center">{isLoading? 'Loading...':posts.data[0]["attributes"].Titre}</h1>
+    
+     <h1 className="text-center">{isLoading? 'Loading...':
+     
+     <Typewriter
+     words={[posts.data[0]["attributes"].Titre,""]}
+     loop={false}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+     >
+        
+     </Typewriter>
+     }
+     
+     </h1>
      <div className="container">
       <div className="row">
         <WrapDIvPhoto >
@@ -36,7 +53,11 @@ export default function Home() {
 
         <WrapDivName>
           <div />
-          <h1 className="text-center">{isLoading? 'Loading...':posts.data[0]["attributes"].nom_photographe}</h1>
+          <h1 className="text-center">{isLoading? 'Loading...':
+          
+          posts.data[0]["attributes"].nom_photographe}
+          
+          </h1>
         
           <div/>
         </WrapDivName>
