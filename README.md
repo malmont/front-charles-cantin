@@ -6,7 +6,7 @@ pour l'application TRT-CONSEIL dévéloppée dans le cadre de l'ECF d'entraineme
 <br/>
 **Développer la partie front-end d’une application web**
 
-de l'école STUDI.
+
 <br/>
 Selon le cahier des charges l'application demandée devra être un site
 vitrine pour un photographe qui veut dévelloper son activité.
