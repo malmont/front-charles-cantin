@@ -2,7 +2,7 @@
 Site vitrine Charles Cantin
 <br/>
 Ce document est un guide de déploiement et un manuel d'utilisation 
-pour l'application TRT-CONSEIL dévéloppée dans le cadre de l'ECF d'entrainement ayant pour titre:
+pour un site vitrine dévéloppée dans le cadre de l'ECF d'entrainement ayant pour titre:
 <br/>
 **Développer la partie front-end d’une application web**
 
